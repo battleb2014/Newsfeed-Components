@@ -140,6 +140,7 @@ function articleMaker(articleObj) {
   p1.textContent = articleObj.firstParagraph;
   p2.textContent = articleObj.secondParagraph;
   p3.textContent = articleObj.thirdParagraph;
+  expand.textContent = '+';
 
   expand.addEventListener('click', event => {
     article.classList.toggle('article-open');
@@ -150,7 +151,7 @@ function articleMaker(articleObj) {
 }
 const articles = document.querySelector('.articles');
 
-data.forEach(art => {
-  const artMaker = articleMaker(art);
+data.forEach(item => {
+  const artMaker = articleMaker(item);
   articles.appendChild(artMaker)
 })
